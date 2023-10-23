@@ -1,0 +1,78 @@
+<div class="px-6 py-4 mt-6">
+  <form [formGroup]="form">
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Seleccione Hotel</mat-label>
+      <mat-select class="w-full" formControlName="hotelId">
+        <mat-option>Seleccione...</mat-option>
+        <mat-option *ngFor="let hotel of hotels" [value]="hotel.id">
+          {{ hotel.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Número de Habitación</mat-label>
+      <input matInput formControlName="roomNumber" />
+      <mat-error *ngIf="form.get('roomNumber')?.invalid && form.get('roomNumber')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Tipo de Habitación</mat-label>
+      <mat-select formControlName="roomType">
+        <mat-option [value]="'Individual'">Individual</mat-option>
+        <mat-option [value]="'Doble'">Doble</mat-option>
+        <mat-option [value]="'Suite'">Suite</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('roomType')?.invalid && form.get('roomType')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Costo Base</mat-label>
+      <input matInput formControlName="baseCost" />
+      <mat-error *ngIf="form.get('baseCost')?.invalid && form.get('baseCost')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Impuestos</mat-label>
+      <input matInput formControlName="taxes" />
+      <mat-error *ngIf="form.get('taxes')?.invalid && form.get('taxes')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Estado Habitación</mat-label>
+      <mat-select formControlName="status">
+        <mat-option [value]="'active'">Habilitar</mat-option>
+        <mat-option [value]="'disabled'">Deshabilitar</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('status')?.invalid && form.get('status')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+
+    <div class="flex justify-between mt-8">
+      <button class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-4 w-1/2 rounded-lg mr-2"
+        (click)="onSubmit()" [disabled]="form.invalid">
+        <span *ngIf="fetching !== 'pending'">Guardar</span>
+        <span *ngIf="fetching === 'pending'" class="flex items-center justify-center">
+          <mat-icon>save</mat-icon>
+          <span>Guardando...</span>
+        </span>
+      </button>
+      <button
+        class="custom-button text-custom-blue bg-white border border-custom-blue font-bold py-2 px-4 w-1/2 rounded-lg"
+        (click)="cancel()">
+        <span>Cancelar</span>
+      </button>
+    </div>
+  </form>
+</div>

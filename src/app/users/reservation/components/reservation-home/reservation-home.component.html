@@ -1,0 +1,22 @@
+<mat-toolbar class="w-full fixed-top text-center">
+  <span class="spanTitle">{{inputdata.title}}</span>
+</mat-toolbar>
+
+<section class="flex flex-col lg:flex-row h-full ">
+  <section class="lg:w-6/12">
+    <mat-card>
+      <mat-card-content>
+        <app-form-reservation #reservationForm (formSubmitted)="handleFormSubmit($event)"></app-form-reservation>
+      </mat-card-content>
+    </mat-card>
+
+  </section>
+  <section class="lg:w-6/12">
+    <mat-card class="h-full">
+      <mat-card-content class="h-full">
+        <img src="{{roomData.image}}" alt="logo" class="w-full h-full" />
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+</section>

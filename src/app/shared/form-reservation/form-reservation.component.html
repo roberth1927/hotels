@@ -1,0 +1,146 @@
+<div class="form-container">
+  <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="mat-elevation-z2 p-4">
+
+    <div class="grid grid-cols-2 gap-4 mb-2">
+      <mat-form-field>
+        <mat-label>First Name:</mat-label>
+        <input matInput formControlName="firstName" required>
+        <mat-error *ngIf="reservationForm.get('firstName')?.invalid && reservationForm.get('firstName')?.touched">
+          First Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last Name:</mat-label>
+        <input matInput formControlName="lastName" required>
+        <mat-error *ngIf="reservationForm.get('lastName')?.invalid && reservationForm.get('lastName')?.touched">
+          Last Name is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mb-2">
+
+      <mat-form-field class="w-full ">
+        <mat-label>Birth Date:</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="reservationForm.get('birthDate')?.invalid && reservationForm.get('birthDate')?.touched">
+          Birth Date is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Gender:</mat-label>
+        <mat-select formControlName="gender" required>
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+        </mat-select>
+        <mat-error *ngIf="reservationForm.get('gender')?.invalid && reservationForm.get('gender')?.touched">
+          Gender is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mb-2">
+
+      <mat-form-field class="w-full ">
+        <mat-label>Document Type:</mat-label>
+        <mat-select formControlName="documentType" required>
+          <mat-option value="Cedula">Cedula</mat-option>
+          <mat-option value="DNI">DNI</mat-option>
+          <mat-option value="Otro">Otro</mat-option>
+        </mat-select>
+        <mat-error *ngIf="reservationForm.get('documentType')?.invalid && reservationForm.get('documentType')?.touched">
+          Document Type
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Document Number:</mat-label>
+        <input matInput formControlName="documentNumber" required>
+        <mat-error
+          *ngIf="reservationForm.get('documentNumber')?.invalid && reservationForm.get('documentNumber')?.touched">
+          Document Number is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mb-2">
+
+      <mat-form-field class="w-full ">
+        <mat-label>Email:</mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="reservationForm.get('email')?.invalid && reservationForm.get('email')?.touched">
+          Invalid email address
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Contact Phone:</mat-label>
+        <input matInput formControlName="contactPhone" required>
+        <mat-error *ngIf="reservationForm.get('contactPhone')?.invalid && reservationForm.get('contactPhone')?.touched">
+          Contact Phone is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mb-2">
+
+      <mat-form-field class="w-full ">
+        <mat-label>Contact Name:</mat-label>
+        <input matInput formControlName="contactName" required>
+        <mat-error *ngIf="reservationForm.get('contactName')?.invalid && reservationForm.get('contactName')?.touched">
+          Contact Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Emergency Contact Phone:</mat-label>
+        <input matInput formControlName="emergencyContactPhone" required>
+        <mat-error
+          *ngIf="reservationForm.get('emergencyContactPhone')?.invalid && reservationForm.get('emergencyContactPhone')?.touched">
+          Emergency Contact Phone is required
+        </mat-error>
+      </mat-form-field>
+
+
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mb-2">
+
+      <mat-form-field class="w-full ">
+        <mat-label>Check-In Date:</mat-label>
+        <input matInput [matDatepicker]="checkInPicker" formControlName="checkInDate" required>
+        <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
+        <mat-datepicker #checkInPicker></mat-datepicker>
+        <mat-error *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched">
+          Check-In Date is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Check-Out Date:</mat-label>
+        <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOutDate" required>
+        <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+        <mat-datepicker #checkOutPicker></mat-datepicker>
+        <mat-error *ngIf="reservationForm.get('checkOutDate')?.invalid && reservationForm.get('checkOutDate')?.touched">
+          Check-Out Date is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full ">
+        <mat-label>Number of People:</mat-label>
+        <input matInput formControlName="numberOfPeople" type="number" required>
+        <mat-error
+          *ngIf="reservationForm.get('numberOfPeople')?.invalid && reservationForm.get('numberOfPeople')?.touched">
+          Invalid number of people
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" [disabled]="reservationForm.invalid">Reservar</button>
+
+  </form>
+</div>

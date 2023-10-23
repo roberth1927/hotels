@@ -1,0 +1,59 @@
+<mat-accordion *ngIf="dataSource.length > 0">
+  <mat-expansion-panel *ngFor="let reservation of dataSource" class="mb-4">
+    <mat-expansion-panel-header class="bg-gray-150 border-b border-gray-200 stylexpantion">
+      <div class="flex flex-col w-full">
+        <div class="flex items-center justify-between">
+          <div class="text-lg styleTilte font-semibold">
+            {{ reservation.firstName }} {{ reservation.lastName }}
+          </div>
+          <div class="text-lg font-semibold mr-3">
+            {{ reservation.hotel.name }} - {{ reservation.hotel.city }}
+          </div>
+        </div>
+        <div class="text-sm text-gray-500 ">
+          Check-In: {{ reservation.checkInDate | date }} - Check-Out:{{ reservation.checkOutDate | date }}
+        </div>
+      </div>
+    </mat-expansion-panel-header>
+    <div class="px-6 py-4">
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <p class="text-gray-600 font-semibold">Tipo Documento</p>
+          <p>{{ reservation.documentType }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Numero Documento</p>
+          <p>{{ reservation.documentNumber }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Email</p>
+          <p>{{ reservation.email }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Contact Phone</p>
+          <p>{{ reservation.contactPhone }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Cumpleaños</p>
+          <p>{{ reservation.birthDate }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Estado Reservaacion</p>
+          <p>{{ reservation.status == 'active' ? 'Activa' : '' }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Numero de personas</p>
+          <p>{{ reservation.numberOfPeople }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Contacto Emergencia</p>
+          <p>{{ reservation.contactName }}</p>
+        </div>
+        <div>
+          <p class="text-gray-600 font-semibold">Numero Emergencia</p>
+          <p>{{ reservation.emergencyContactPhone }}</p>
+        </div>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

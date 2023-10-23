@@ -1,0 +1,23 @@
+<mat-card class="p-6">
+  <mat-card-title class="custom-mat-card-title mb-2">
+    <span class="pl-4">Lista de Hoteles</span>
+    <button class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-6 mr-4 rounded-lg" type="button" (click)="openDialog()">
+      <mat-icon class="mr-2 pt-1">add</mat-icon>
+      Crear Hotel
+    </button>
+  </mat-card-title>
+  <mat-card-subtitle class="pl-4">Todos los hoteles registrados</mat-card-subtitle>
+  <mat-card-content class="mt-3">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" backgroundColor="primary" animationDuration="300ms">
+      <mat-tab *ngFor="let tnav of titlenav">
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">{{tnav.icon}}</mat-icon>
+          {{tnav.label}}
+        </ng-template>
+        <ng-template matTabContent>
+          <app-table-hotels #tablehotel [status]="tnav.status"></app-table-hotels>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,35 @@
+<mat-sidenav-container class="app-drawer-container" fullscreen>
+
+  <mat-sidenav #sidenav mode="side" class="custom-sidenav ">
+    <mat-toolbar class="xxx">
+      <span>Menú</span>
+      <button (click)="toggle()" mat-icon-button color="primary">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item routerLink="/dashboard/hotels/list">
+        <mat-icon matListIcon class="mr-5 pt-2">hotel</mat-icon>
+        <a matLine>Listado Hoteles </a>
+      </mat-list-item>
+      <mat-list-item routerLink="/dashboard/rooms/list">
+        <mat-icon matListIcon class="mr-5 pt-2">meeting_room</mat-icon>
+        <a matLine>Lista Habitaciónes </a>
+      </mat-list-item>
+      <mat-list-item routerLink="/dashboard/reservations/list">
+        <mat-icon matListIcon class="mr-5 pt-2">room</mat-icon>
+        <a matLine>Listado Reservas </a>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

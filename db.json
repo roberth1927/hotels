@@ -1,0 +1,427 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "email": "admin@admin.com",
+      "password": "admin123"
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Cartagena plaza",
+      "location": "123 Main Street, City Example",
+      "city": "Cartagena",
+      "commission": 0.1,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Estrella Roja",
+      "location": "456 Elm Street, City Example",
+      "city": "Bogotá",
+      "commission": 0.12,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Hotel Vikingo",
+      "location": "789 Oak Street, City Example",
+      "city": "Medellín",
+      "commission": 0.15,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Hotel Radamel",
+      "location": "101 Pine Street, City Example",
+      "city": "Cali",
+      "commission": 0.08,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Continental",
+      "location": "202 Cedar Street, City Example",
+      "city": "Barranquilla",
+      "commission": 0.11,
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Bob Marley Stellar",
+      "city": "Santa Marta",
+      "location": "avenida siempre viva 123",
+      "commission": "1.0",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "name": "Pascual Guerrero",
+      "city": "Cali",
+      "location": "san fernando",
+      "commission": "19",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "name": "Hotel Radamel",
+      "city": "Cartagena",
+      "location": "calle tigre",
+      "commission": "23",
+      "status": "active"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "hotelId": 1,
+      "roomNumber": 101,
+      "roomType": "Individual",
+      "baseCost": 100,
+      "taxes": 10,
+      "status": "reserved",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 2,
+      "hotelId": 1,
+      "roomNumber": 102,
+      "roomType": "Doble",
+      "baseCost": 150,
+      "taxes": 15,
+      "status": "reserved",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 3,
+      "hotelId": 1,
+      "roomNumber": 103,
+      "roomType": "Suite",
+      "baseCost": 200,
+      "taxes": 20,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 4,
+      "hotelId": 2,
+      "roomNumber": 201,
+      "roomType": "Individual",
+      "baseCost": 110,
+      "taxes": 11,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 5,
+      "hotelId": 2,
+      "roomNumber": 202,
+      "roomType": "Doble",
+      "baseCost": 160,
+      "taxes": 16,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 6,
+      "hotelId": 2,
+      "roomNumber": 203,
+      "roomType": "Individual",
+      "baseCost": 210,
+      "taxes": 21,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 7,
+      "hotelId": 3,
+      "roomNumber": 301,
+      "roomType": "Individual",
+      "baseCost": 120,
+      "taxes": 12,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 8,
+      "hotelId": 3,
+      "roomNumber": 302,
+      "roomType": "Doble",
+      "baseCost": 170,
+      "taxes": 17,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 9,
+      "hotelId": 3,
+      "roomNumber": 303,
+      "roomType": "Suite",
+      "baseCost": 220,
+      "taxes": 22,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 10,
+      "hotelId": 4,
+      "roomNumber": 401,
+      "roomType": "Individual",
+      "baseCost": 130,
+      "taxes": 13,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 11,
+      "hotelId": 4,
+      "roomNumber": 402,
+      "roomType": "Doble",
+      "baseCost": 180,
+      "taxes": 18,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 12,
+      "hotelId": 4,
+      "roomNumber": 403,
+      "roomType": "Suite",
+      "baseCost": 230,
+      "taxes": 23,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 13,
+      "hotelId": 5,
+      "roomNumber": 501,
+      "roomType": "Individual",
+      "baseCost": 140,
+      "taxes": 14,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 14,
+      "hotelId": 5,
+      "roomNumber": 502,
+      "roomType": "Doble",
+      "baseCost": 190,
+      "taxes": 19,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 15,
+      "hotelId": 5,
+      "roomNumber": 503,
+      "roomType": "Suite",
+      "baseCost": 240,
+      "taxes": 24,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 16,
+      "hotelId": 6,
+      "roomNumber": 601,
+      "roomType": "Individual",
+      "baseCost": 150,
+      "taxes": 15,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 17,
+      "hotelId": 6,
+      "roomNumber": 602,
+      "roomType": "Doble",
+      "baseCost": 200,
+      "taxes": 20,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 18,
+      "hotelId": 6,
+      "roomNumber": 603,
+      "roomType": "Suite",
+      "baseCost": 250,
+      "taxes": 25,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 19,
+      "hotelId": 1,
+      "roomNumber": 104,
+      "roomType": "Individual",
+      "baseCost": 110,
+      "taxes": 11,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 20,
+      "hotelId": 1,
+      "roomNumber": 105,
+      "roomType": "Doble",
+      "baseCost": 160,
+      "taxes": 16,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 21,
+      "hotelId": 2,
+      "roomNumber": 204,
+      "roomType": "Individual",
+      "baseCost": 120,
+      "taxes": 12,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 22,
+      "hotelId": 3,
+      "roomNumber": 304,
+      "roomType": "Doble",
+      "baseCost": 170,
+      "taxes": 17,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 23,
+      "hotelId": 4,
+      "roomNumber": 404,
+      "roomType": "Suite",
+      "baseCost": 220,
+      "taxes": 22,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 24,
+      "hotelId": 5,
+      "roomNumber": 504,
+      "roomType": "Individual",
+      "baseCost": 130,
+      "taxes": 13,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 25,
+      "hotelId": 6,
+      "roomNumber": 604,
+      "roomType": "Doble",
+      "baseCost": 180,
+      "taxes": 18,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 26,
+      "hotelId": 1,
+      "roomNumber": 106,
+      "roomType": "Suite",
+      "baseCost": 230,
+      "taxes": 23,
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 27,
+      "hotelId": 2,
+      "roomNumber": 205,
+      "roomType": "Doble",
+      "baseCost": 140,
+      "taxes": 14,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 28,
+      "hotelId": 3,
+      "roomNumber": 305,
+      "roomType": "Doble",
+      "baseCost": 190,
+      "taxes": 19,
+      "status": "active",
+      "image": "/assets/rooms/doble.jpg"
+    },
+    {
+      "id": 29,
+      "hotelId": 4,
+      "roomNumber": 405,
+      "roomType": "Individual",
+      "baseCost": 240,
+      "taxes": 24,
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    },
+    {
+      "id": 30,
+      "hotelId": 6,
+      "roomNumber": 505,
+      "roomType": "Suite",
+      "baseCost": "666",
+      "taxes": "666",
+      "status": "active",
+      "image": "/assets/rooms/suite.jpg"
+    },
+    {
+      "id": 31,
+      "hotelId": 4,
+      "roomNumber": "123",
+      "roomType": "Individual",
+      "baseCost": "980",
+      "taxes": "23",
+      "status": "active",
+      "image": "/assets/rooms/sencilla.jpg"
+    }
+  ],
+  "reservations": [
+    {
+      "firstName": "Roberth ",
+      "lastName": "Morales",
+      "birthDate": "2023-10-01T05:00:00.000Z",
+      "gender": "male",
+      "documentType": "Cedula",
+      "documentNumber": "1234567",
+      "email": "robinmoralesquiroz@gmail.com",
+      "contactPhone": "3227188551",
+      "status": "active",
+      "contactName": "Benjamin Morales",
+      "emergencyContactPhone": "3227188551",
+      "hotelId": 1,
+      "roomId": 1,
+      "numberOfPeople": 2,
+      "checkInDate": "2023-10-01T05:00:00.000Z",
+      "checkOutDate": "2023-10-31T05:00:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "Benjamin Morales ",
+      "lastName": "Baez",
+      "birthDate": "2023-10-13T05:00:00.000Z",
+      "gender": "male",
+      "documentType": "DNI",
+      "documentNumber": "87655",
+      "email": "robinmoralesquiroz@gmail.com",
+      "contactPhone": "3227188551",
+      "status": "active",
+      "contactName": "Roberth Morales",
+      "emergencyContactPhone": "3227188551",
+      "hotelId": 1,
+      "roomId": 2,
+      "numberOfPeople": 3,
+      "checkInDate": "2023-10-10T05:00:00.000Z",
+      "checkOutDate": "2023-10-29T05:00:00.000Z",
+      "id": 4
+    }
+  ]
+}

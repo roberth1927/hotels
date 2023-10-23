@@ -1,0 +1,61 @@
+<div class="px-6 py-4 mt-6">
+  <form [formGroup]="form">
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Ciudad</mat-label>
+      <mat-select formControlName="city">
+        <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad">
+          {{ ciudad }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('ciudad')?.invalid && form.get('ciudad')?.touched">
+        Por favor, selecciona una ciudad.
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" />
+      <mat-icon color="primary" matSuffix>badge</mat-icon>
+      <mat-error *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Ubicación</mat-label>
+      <input matInput formControlName="location" />
+      <mat-icon color="primary" matSuffix>location_on</mat-icon>
+      <mat-error *ngIf="form.get('location')?.invalid && form.get('location')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-6">
+      <mat-label>Comisión</mat-label>
+      <input matInput formControlName="commission" />
+      <mat-icon color="primary" matSuffix>monetization_on</mat-icon>
+      <mat-error *ngIf="form.get('commission')?.invalid && form.get('commission')?.touched">
+        Este campo es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <div class="flex justify-between mt-8">
+      <button class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-4 w-1/2 rounded-lg mr-2"
+        (click)="onSubmit()" [disabled]="form.invalid || fetching === 'pending'">
+        <span *ngIf="fetching !== 'pending'">Guardar</span>
+        <span *ngIf="fetching === 'pending'" class="flex items-center justify-center">
+          <mat-icon>save</mat-icon>
+          <span>Guardando...</span>
+        </span>
+      </button>
+      <button
+        class="custom-button text-custom-blue bg-white border border-custom-blue font-bold py-2 px-4 w-1/2 rounded-lg"
+        (click)="cancel()">
+        <span>Cancelar</span>
+      </button>
+
+    </div>
+  </form>
+</div>

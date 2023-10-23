@@ -1,0 +1,21 @@
+<div class="flex flex-col border border-gray-300 rounded-lg shadow-lg mb-4 mr-3">
+
+  <div class="p-6">
+    <h4 class=" ml-2 text-lg font-semibold">Seleccione Hotel</h4>
+    <mat-form-field class="w-full">
+      <mat-label>Seleccione...</mat-label>
+      <mat-select class="w-full" (selectionChange)="onHotelSelectionChange($event.value)">
+        <mat-option>Seleccione...</mat-option>
+        <mat-option *ngFor="let hotel of hotels" [value]="hotel.id">
+          {{ hotel.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="pl-6 pb-6 flex flex-col">
+    <h4 class="mb-2 ml-2 text-lg font-semibold">Seleccione Estado</h4>
+    <mat-checkbox class="example-margin" [(ngModel)]="activeFilter" (change)="onStatusCheckboxChange()">Habilitada</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="reservedFilter" (change)="onStatusCheckboxChange()">Reservada</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="disabledFilter" (change)="onStatusCheckboxChange()">Desabilitada</mat-checkbox>
+  </div>
+</div>

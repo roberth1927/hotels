@@ -1,0 +1,34 @@
+<div class="flex border border-gray-300 w-1/2 justify-items-center rounded-lg shadow-lg mb-4 mt-6 mx-auto">
+
+  <div class="w-1/3 relative">
+    <img [src]="room.image" alt="Habitación" class="h-full object-cover rounded-lg">
+  </div>
+
+  <div class="w-2/3 pl-4">
+    <div class="mt-5 flex justify-between">
+      <p class="text-2xl styleTilte font-semibold">{{ room.hotel.name }} - {{room.hotel.city }}</p>
+      <div [ngClass]="{'habilitada': room.status, 'deshabilitada': !room.status}"
+        class="mr-6 text-white font-bold py-1 px-6 rounded-3xl h-full">
+        <p class=" font-semibold pt-2">
+          {{ room.status ? 'Habilitada' : 'Deshabilitada' }}
+        </p>
+      </div>
+    </div>
+
+    <p class="text-gray-600 font-semibold  mb-2">{{ room.roomType }}</p>
+    <p class="text-gray-600 font-semibold  mb-2">Número de habitación: {{ room.roomNumber }}</p>
+
+    <div class="flex flex-col">
+      <p class="text-gray-600 font-semibold ">Costo base: ${{ room.baseCost }}</p>
+      <p class="text-gray-600 font-semibold ">Impuestos: ${{ room.taxes }}</p>
+    </div>
+
+    <div class="flex flex-col items-end pr-6 mb-4">
+      <button (click)="openDialog(room)" class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-4 rounded">
+        Realiza tu reserva
+      </button>
+
+    </div>
+
+  </div>
+</div>

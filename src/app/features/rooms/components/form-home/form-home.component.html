@@ -1,0 +1,6 @@
+<mat-toolbar class="w-full fixed-top bg-custom-blue pl-12 text-center">
+  <span class="spanTitle">{{inputdata.title}}</span>
+</mat-toolbar>
+<div mat-dialog-content>
+    <app-form-room #roomForm (formSubmitted)="handleFormSubmit($event)"></app-form-room>
+</div>
