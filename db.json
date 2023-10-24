@@ -9,9 +9,9 @@
   "hotels": [
     {
       "id": 1,
-      "name": "Cartagena plaza",
+      "name": "Hotel Alfonso Lopez",
+      "city": "Bucaramanga",
       "location": "123 Main Street, City Example",
-      "city": "Cartagena",
       "commission": 0.1,
       "status": "active"
     },
@@ -33,11 +33,11 @@
     },
     {
       "id": 4,
-      "name": "Hotel Radamel",
-      "location": "101 Pine Street, City Example",
+      "name": "Hotel Cali",
       "city": "Cali",
+      "location": "101 Pine Street, City Example",
       "commission": 0.08,
-      "status": "active"
+      "status": "disabled"
     },
     {
       "id": 5,
@@ -78,9 +78,9 @@
       "hotelId": 1,
       "roomNumber": 101,
       "roomType": "Individual",
-      "baseCost": 100,
+      "baseCost": 777,
       "taxes": 10,
-      "status": "reserved",
+      "status": "disabled",
       "image": "/assets/rooms/sencilla.jpg"
     },
     {
@@ -110,7 +110,7 @@
       "roomType": "Individual",
       "baseCost": 110,
       "taxes": 11,
-      "status": "active",
+      "status": "disabled",
       "image": "/assets/rooms/sencilla.jpg"
     },
     {
@@ -125,13 +125,13 @@
     },
     {
       "id": 6,
-      "hotelId": 2,
+      "hotelId": 7,
       "roomNumber": 203,
-      "roomType": "Individual",
+      "roomType": "Suite",
       "baseCost": 210,
       "taxes": 21,
       "status": "active",
-      "image": "/assets/rooms/sencilla.jpg"
+      "image": "/assets/rooms/suite.jpg"
     },
     {
       "id": 7,

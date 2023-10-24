@@ -9,3 +9,17 @@
 .deshabilitada {
   background-color: #F44A3E;
 }
+
+.reservada {
+  background-color: #4758B8;
+}
+
+.image-container img {
+  width: 500px;
+  height: 270px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}

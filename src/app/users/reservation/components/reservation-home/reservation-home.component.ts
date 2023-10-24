@@ -25,7 +25,6 @@ export class ReservationHomeComponent implements OnInit {
   ngOnInit(): void {
     this.inputdata = this.data;
     this.roomData = this.inputdata.roomData;
-    console.log(this.roomData);
   }
 
   handleFormSubmit(form: any) {

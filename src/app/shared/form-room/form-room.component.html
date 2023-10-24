@@ -51,6 +51,7 @@
       <mat-label>Estado Habitación</mat-label>
       <mat-select formControlName="status">
         <mat-option [value]="'active'">Habilitar</mat-option>
+        <mat-option [value]="'reserved'">Reservar</mat-option>
         <mat-option [value]="'disabled'">Deshabilitar</mat-option>
       </mat-select>
       <mat-error *ngIf="form.get('status')?.invalid && form.get('status')?.touched">

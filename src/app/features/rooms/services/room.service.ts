@@ -57,7 +57,7 @@ export class RoomService {
       switchMap(() => {
         return this.getRooms().pipe(
           map((data) => {
-            const reversedData = data.reverse();
+            const reversedData = data;
             this.dataHotels = reversedData;
             this.filteredRoomSubject.next(reversedData);
             return reversedData;

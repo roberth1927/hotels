@@ -1,15 +1,18 @@
 <div class="flex border border-gray-300 rounded-lg shadow-lg mb-4">
 
-  <div class="w-1/3 relative">
-    <img [src]="room.image" alt="Habitación" class="h-full object-cover rounded-lg">
-  </div>
+  <div class="w-1/3 relative rounded-l-lg">
+    <img [src]="room.image" alt="Habitación" class="h-72 w-full object-cover rounded-l-lg">
+</div>
+
 
   <div class="w-2/3 pl-4">
     <div class="mt-5 flex justify-between">
       <p class="text-3xl font-bold">{{ room.hotel.name }}</p>
-      <div [ngClass]="{'habilitada': room.status, 'deshabilitada': !room.status}" class="mr-6 text-white font-bold py-1 px-6 rounded-3xl h-full">
+      <div
+        [ngClass]="{'habilitada': room.status === 'active', 'deshabilitada': room.status === 'disabled', 'reservada': room.status === 'reserved'}"
+        class="mr-6 text-white font-bold py-1 px-6 rounded-3xl h-full">
         <p class=" font-semibold pt-2">
-          {{ room.status ? 'Habilitada' : 'Deshabilitada' }}
+          {{ room.status === 'active' ? 'Habilitada' : (room.status === 'reserved' ? 'Reservada' : 'Deshabilitada') }}
         </p>
       </div>
     </div>
@@ -23,15 +26,9 @@
     </div>
 
     <div class="flex flex-col items-end pr-6">
-     <!--  <button class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-4 rounded">
-        Realiza tu reserva
-      </button> -->
-     <!--  <button class="bg-custom-blue hover:bg-custom-blue-lighter text-white font-bold py-2 px-4 rounded">
-        Editar
-      </button> -->
-
       <div class="example-button-container">
-        <button (click)="openDialog(room)" class="custom-blue p-1 rounded-lg text-white"  matTooltip="Editar" mat-fab color="accent" aria-label="Example icon button with a home icon">
+        <button (click)="openDialog(room)" class="custom-blue p-1 rounded-lg text-white" matTooltip="Editar" mat-fab
+          color="accent" aria-label="Example icon button with a home icon">
           <mat-icon>edit</mat-icon>
         </button>
       </div>

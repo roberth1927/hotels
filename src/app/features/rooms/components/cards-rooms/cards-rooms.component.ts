@@ -16,7 +16,6 @@ export class CardsRoomsComponent {
 
 
   openDialog(room: Room): void {
-    console.log(room)
     const dialogRef = this.dialog.open(FormHomeComponent, {
       width: '600px',
       data: { title: 'Editar Habitación', roomData: room },
