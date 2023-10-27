@@ -1,0 +1,27 @@
+.scrolling-text-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0092D7;
+  color: #494949;
+  font-size: 24px;
+}
+
+.scrolling-text-content {
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.custom-mat-card-title {
+  color: #0092D7;
+
+}
+

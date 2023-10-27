@@ -80,7 +80,7 @@
       "roomType": "Individual",
       "baseCost": 777,
       "taxes": 10,
-      "status": "active",
+      "status": "disabled",
       "image": "/assets/rooms/sencilla.jpg"
     },
     {
