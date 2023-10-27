@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormHomeComponent } from './components/form-home/form-home.component';
 import { FormHotelModule } from 'src/app/shared/form-hotel/form-hotel.module';
 import { NoDataModule } from 'src/app/shared/no-data/no-data.module';
+import { SliderModule } from 'src/app/shared/slider/slider.module';
 
 
 
@@ -23,7 +24,8 @@ import { NoDataModule } from 'src/app/shared/no-data/no-data.module';
     HotelsRoutingModule,
     SharedModule,
     FormHotelModule,
-    NoDataModule
+    NoDataModule,
+    SliderModule
   ]
 })
 export class HotelsModule { }

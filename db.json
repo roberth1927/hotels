@@ -37,7 +37,7 @@
       "city": "Cali",
       "location": "101 Pine Street, City Example",
       "commission": 0.08,
-      "status": "disabled"
+      "status": "active"
     },
     {
       "id": 5,
@@ -69,7 +69,7 @@
       "city": "Cartagena",
       "location": "calle tigre",
       "commission": "23",
-      "status": "active"
+      "status": "disabled"
     }
   ],
   "rooms": [
@@ -80,7 +80,7 @@
       "roomType": "Individual",
       "baseCost": 777,
       "taxes": 10,
-      "status": "disabled",
+      "status": "active",
       "image": "/assets/rooms/sencilla.jpg"
     },
     {
