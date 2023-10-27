@@ -1,18 +1,24 @@
 <app-header-dashboard></app-header-dashboard>
-<div class="flex  items-center p-6">
+<div class="flex items-center p-6">
   <span class="text-4xl m-auto text-center mb-8 styleTilte font-semibold">Encuentra tu hotel de preferencia</span>
 </div>
-<section class="flex  items-center justify-center ">
-  <app-filters></app-filters>
-</section>
-<section class="flex w-70">
-  <div *ngIf="rooms && rooms.length > 0">
-    <app-card-reservation *ngFor="let room of rooms" [room]="room"  class="fade-in-up"></app-card-reservation>
-  </div>
-  <div *ngIf="!rooms || rooms.length === 0" class="m-auto">
-    <app-no-data></app-no-data>
-  </div>
 
-</section>
+<section class="flex flex-col lg:flex-row h-full justify-center">
+  <section class="lg:w-3/12 ml-10">
+    <app-filters></app-filters>
+  </section>
+  <section class="lg:w-9/12">
+    <div class="cards-container">
+      <div *ngIf="rooms && rooms.length > 0">
+        <app-card-reservation *ngFor="let room of rooms" [room]="room" class="fade-in-up"></app-card-reservation>
+      </div>
+      <div *ngIf="!rooms || rooms.length === 0" class="m-auto">
+        <app-no-data></app-no-data>
+      </div>
+    </div>
+    <mat-paginator [length]="pagination.length" [pageSize]="pagination._limit" (page)="getRooms($event)"></mat-paginator>
+  </section>
 
- <mat-paginator [length]="pagination.length" [pageSize]="pagination._limit" (page)="getRooms($event)"></mat-paginator>
+
+
+
