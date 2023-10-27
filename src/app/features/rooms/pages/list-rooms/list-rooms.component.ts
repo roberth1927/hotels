@@ -3,6 +3,8 @@ import { RoomService } from '../../services/room.service';
 import { Fetching } from 'src/app/features/shared/types/FetcingType';
 import { MatDialog } from '@angular/material/dialog';
 import { FormHomeComponent } from '../../components/form-home/form-home.component';
+import { imagesrooms } from '../../../hotels/dataset/dataset';
+
 
 @Component({
   selector: 'app-list-rooms',
@@ -11,6 +13,7 @@ import { FormHomeComponent } from '../../components/form-home/form-home.componen
 })
 export class ListRoomsComponent implements OnInit {
   rooms: any[] = [];
+  imagesrooms = imagesrooms;
   fetching: Fetching = 'iddle';
   constructor(public _roomService: RoomService, public dialog: MatDialog) {}
 

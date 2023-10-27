@@ -8,6 +8,7 @@ import { CardsRoomsComponent } from './components/cards-rooms/cards-rooms.compon
 import { FormHomeComponent } from './components/form-home/form-home.component';
 import { FormRoomModule } from 'src/app/shared/form-room/form-room.module';
 import { NoDataModule } from 'src/app/shared/no-data/no-data.module';
+import { SliderModule } from 'src/app/shared/slider/slider.module';
 
 
 
@@ -23,7 +24,8 @@ import { NoDataModule } from 'src/app/shared/no-data/no-data.module';
     RoomsRoutingModule,
     MaterialModule,
     FormRoomModule,
-    NoDataModule
+    NoDataModule,
+    SliderModule
   ]
 })
 export class RoomsModule { }

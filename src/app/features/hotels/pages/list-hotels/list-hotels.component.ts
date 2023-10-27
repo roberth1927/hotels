@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { titlenav } from '../../dataset/dataset';
+import { titlenav, imageshotels } from '../../dataset/dataset';
 import { MatDialog } from '@angular/material/dialog';
 import { FormHomeComponent } from '../../components/form-home/form-home.component';
 import { TableHotelsComponent } from '../../components/table-hotels/table-hotels.component';
@@ -10,9 +10,10 @@ import { TableHotelsComponent } from '../../components/table-hotels/table-hotels
   styleUrls: ['./list-hotels.component.scss'],
 })
 export class ListHotelsComponent implements OnInit {
-  titlenav = titlenav;
   @ViewChild('tablehotel') tablehotel!: TableHotelsComponent;
 
+  titlenav = titlenav;
+  imageshotels = imageshotels;
 
   constructor(public dialog: MatDialog) {}
 
@@ -25,7 +26,7 @@ export class ListHotelsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      this.tablehotel.getHotels()
+      this.tablehotel.getHotels();
     });
   }
 }
