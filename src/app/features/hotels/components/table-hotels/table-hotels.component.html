@@ -1,4 +1,4 @@
-<app-loading *ngIf="fetching=='pending'" label="Buscando hoteles..."></app-loading>
+<!-- <app-loading *ngIf="fetching=='pending'" label="Buscando hoteles..."></app-loading> -->
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
@@ -54,7 +54,12 @@
     </tr>
   </table>
 
-  <mat-spinner *ngIf="fetching != 'succeded'" class="mx-auto mt-4"></mat-spinner>
+  <!-- <mat-spinner *ngIf="fetching != 'succeded'" class="mx-auto mt-4"></mat-spinner> -->
+ <!--  <app-loading-data *ngIf="fetching != 'succeded'" class="flex flex-col items-center justify-center p-6" ></app-loading-data> -->
+
+  <div *ngIf="fetching != 'succeded'" class="flex flex-col items-center justify-center p-6">
+      <app-loading-data></app-loading-data>
+  </div>
 
   <mat-paginator [length]="pagination.length" [pageSize]="pagination._limit" (page)="getHotels($event)">
   </mat-paginator>
